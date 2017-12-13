@@ -6,7 +6,8 @@
 #' @param npart number of particles per hour in a dispersion model
 #' @export run_model
 
-run_model <- function(model, npart = 2500) {
+run_model <- function(model, 
+                      npart = 2500) {
   
   if (inherits(model, "traj_model")) {
 
