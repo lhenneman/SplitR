@@ -2,8 +2,8 @@
 #' @description Run either a trajectory model or a
 #' dispersion model, depending on the class of the
 #' SplitR modeling object
-#' @param model a SplitR modeling object
-#' @param npart number of particles per hour in a dispersion model
+#' @param model a SplitR modeling object.
+#' @param npart number of particles per hour in a dispersion model.
 #' @export run_model
 
 run_model <- function(model, 
