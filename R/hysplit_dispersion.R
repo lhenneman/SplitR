@@ -713,7 +713,7 @@ hysplit_dispersion <- function(lat = 49.263,
                   " GIS_part_*.csv; rm *.bk)"))
   system(paste0("(cd ", getwd(),
                   " && sed -i .bk 's/END//g'",
-                  " GIS_part_*.csv; rm *.bk)"))
+                  " GIS_part_*.csv"))
   }
   
   if (get_os() == "win") {        
