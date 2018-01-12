@@ -708,7 +708,10 @@ hysplit_dispersion <- function(lat = 49.263,
   # Remove the 'END' string near the end of
   # each CSV file
   if (any(c("mac", "unix") %in% get_os())) {
-    system(paste0("(cd ", getwd(),
+     print(paste0("(cd ", getwd(),
+                  " && sed -i .bk 's/END//g'",
+                  " GIS_part_*.csv; rm *.bk)")
+  system(paste0("(cd ", getwd(),
                   " && sed -i .bk 's/END//g'",
                   " GIS_part_*.csv; rm *.bk)"))
   }
