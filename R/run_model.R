@@ -5,7 +5,8 @@
 #' @param model a SplitR modeling object
 #' @export run_model
 
-run_model <- function(model) {
+run_model <- function(model, 
+                      npart = 2500) {
   
   if (inherits(model, "traj_model")) {
 
@@ -58,7 +59,7 @@ run_model <- function(model) {
                              0, model$vert_motion),
         model_height = ifelse(is.null(model$model_height),
                               20000, model$model_height),
-        particle_num = 2500,
+        particle_num = npart,
         particle_max = 10000,
         emissions = model$emissions,
         species = model$species,
