@@ -682,26 +682,26 @@ hysplit_dispersion <- function(lat = 49.263,
   }
   
   # Remove the .att files from the working directory
-  if (any(c("mac", "unix") %in% get_os())) {
-    system(paste0("(cd ", getwd(),
-                  " && rm GIS_part*.att)"))
-  }
+  #if (any(c("mac", "unix") %in% get_os())) {
+  #  system(paste0("(cd ", getwd(),
+  #                " && rm GIS_part*.att)"))
+  #}
   
-  if (get_os() == "win") {
-    shell(paste0("(cd \"", getwd(),
-                 "\" && del GIS_part*.att)"))
-  }
+  #if (get_os() == "win") {
+  #  shell(paste0("(cd \"", getwd(),
+  #               "\" && del GIS_part*.att)"))
+  #}
   
   # Remove the postscript plot from the working directory
-  if (any(c("mac", "unix") %in% get_os())) {
-    system(paste0("(cd ", getwd(),
-                  " && rm parhplot.ps)"))
-  }
+  #if (any(c("mac", "unix") %in% get_os())) {
+  #  system(paste0("(cd ", getwd(),
+  #                " && rm parhplot.ps)"))
+  #}
   
-  if (get_os() == "win") {
-    shell(paste0("(cd \"", getwd(),
-                 "\" && del parhplot.ps)"))
-  }
+  #if (get_os() == "win") {
+  #  shell(paste0("(cd \"", getwd(),
+  #               "\" && del parhplot.ps)"))
+  #}
   
   # Rename the TXT files as CSV files
   if (any(c("mac", "unix") %in% get_os())) {
