@@ -775,7 +775,6 @@ hysplit_dispersion <- function(lat = 49.263,
                format(Sys.time(),
                       "%Y-%m-%d--%H-%M-%S"))  
     }
-    print(folder_name)
     
     # Perform the movement of all dispersion files
     # into a folder residing in the output dir
@@ -788,7 +787,8 @@ hysplit_dispersion <- function(lat = 49.263,
                  folder_name,
                  "\")"))
   }
-  
+  print(folder_name)
+
   # Write the dispersion data frame to a CSV if
   # it is requested
   if (write_disp_CSV) {
