@@ -787,7 +787,8 @@ hysplit_dispersion <- function(lat = 49.263,
                  folder_name,
                  "\")"))
   }
-  print(folder_name)
+  print(paste0(getwd(), "/",
+                               folder_name))
 
   # Write the dispersion data frame to a CSV if
   # it is requested
