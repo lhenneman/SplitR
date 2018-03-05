@@ -708,10 +708,7 @@ hysplit_dispersion <- function(lat = 49.263,
   # Remove the 'END' string near the end of
   # each CSV file
   if (any(c("mac", "unix") %in% get_os())) {
-     print(paste0("(cd ", getwd(),
-                  " && sed -i .bk 's/END//g'",
-                  " GIS_part_*.csv; rm *.bk)"))
-  system(paste0("(cd ", getwd(),
+   system(paste0("(cd ", getwd(),
                   " && sed -i .bk 's/END//g'",
                   " GIS_part_*.csv"))
   }
@@ -787,9 +784,7 @@ hysplit_dispersion <- function(lat = 49.263,
                  folder_name,
                  "\")"))
   }
-  print(paste0(getwd(), "/",
-                               folder_name))
-
+  
   # Write the dispersion data frame to a CSV if
   # it is requested
   if (write_disp_CSV) {
