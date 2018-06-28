@@ -646,7 +646,11 @@ hysplit_dispersion <- function(lat = 49.263,
   }
   
   if (get_os() == "unix") {
-    system(paste0("(cd ", getwd(), " && /nfs/nsaph_ci3/ci3_analysis/zigler_lab/software/hysplit/trunk/exec/hycs_std >> /dev/null 2>&1)"))
+    system(paste0("(cd ", getwd(), " && ",
+                  system.file("linux-amd64/hycs_std",
+                              package = "SplitR"),
+                  " >> /dev/null 2>&1)"))
+#    system(paste0("(cd ", getwd(), " && /nfs/nsaph_ci3/ci3_analysis/zigler_lab/software/hysplit/trunk/exec/hycs_std >> /dev/null 2>&1)"))
   }
   
   if (get_os() == "win") {
@@ -665,7 +669,11 @@ hysplit_dispersion <- function(lat = 49.263,
   }
   
   if (get_os() == "unix") {
-    system(paste0("(cd ", getwd(), "/", " && /nfs/nsaph_ci3/ci3_analysis/zigler_lab/software/hysplit/trunk/exec/parhplot -iPARDUMP -a1)"))
+   system(paste0("(cd ", getwd(), "/", " && ",
+                  system.file("linux-amd64/parhplot",
+                              package = "SplitR"),
+                  " -iPARDUMP -a1)"))
+#    system(paste0("(cd ", getwd(), "/", " && /nfs/nsaph_ci3/ci3_analysis/zigler_lab/software/hysplit/trunk/exec/parhplot -iPARDUMP -a1)"))
   }
   
   if (get_os() == "win") {
