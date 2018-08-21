@@ -650,11 +650,6 @@ hysplit_dispersion <- function(lat = 49.263,
                   system.file("linux-amd64/hycs_std",
                               package = "SplitR"),
                   " >> /dev/null 2>&1)"))
-    print( paste0("(cd ", getwd(), " && ",
-                  system.file("linux-amd64/hycs_std",
-                              package = "SplitR"),
-                  " >> /dev/null 2>&1)"))
-#    system(paste0("(cd ", getwd(), " && /nfs/home/H/henneman/shared_space/ci3_nsaph_scratch/henneman_software/software/hysplit/trunk/exec/hycs_std >> /dev/null 2>&1)"))
   }
   
   if (get_os() == "win") {
@@ -673,15 +668,10 @@ hysplit_dispersion <- function(lat = 49.263,
   }
   
   if (get_os() == "unix") {
-   system(paste0("(cd ", getwd(), "/", " && ",
-                  system.file("linux-amd64/parhplot",
-                              package = "SplitR"),
+    system(paste0("(cd ", getwd(), "/", " && ",	   
+                  system.file("linux-amd64/parhplot",	 
+                              package = "SplitR"),	 
                   " -iPARDUMP -a1)"))
-    print( paste0("(cd ", getwd(), "/", " && ",
-                  system.file("linux-amd64/parhplot",
-                              package = "SplitR"),
-                  " -iPARDUMP -a1)"))
-#    system(paste0("(cd ", getwd(), "/", " && /nfs/home/H/henneman/shared_space/ci3_nsaph_scratch/henneman_software/software/hysplit/trunk/exec/parhplot -iPARDUMP -a1)"))
   }
   
   if (get_os() == "win") {
