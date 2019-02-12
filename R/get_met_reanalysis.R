@@ -40,7 +40,7 @@ get_met_reanalysis <- function(files = NULL,
       }
       
       if (.Platform$OS.type == "unix") {
-        download(
+        download.file(
           url = paste0(reanalysis_dir,
                        files[i]),
           destfile = paste0(path_met_files,
@@ -58,7 +58,7 @@ get_met_reanalysis <- function(files = NULL,
     for (i in 1:length(years)) {
       for (j in 1:12) {
         if (.Platform$OS.type == "unix") {
-          download(
+          download.file(
             url = paste0(reanalysis_dir,
                          "RP",
                          years[i],
@@ -80,7 +80,7 @@ get_met_reanalysis <- function(files = NULL,
         }
         
         if (.Platform$OS.type == "windows") {
-          download(
+          download.file(
             url = paste0(reanalysis_dir,
                          "RP",
                          years[i],
